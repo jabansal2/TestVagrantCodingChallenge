@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]">
+  <test parallel="none" name="Test(failed)">
+    <classes>
+      <class name="TestScripts.NdtvTest">
+        <methods>
+          <include name="setupAPI"/>
+          <include name="testUI"/>
+          <include name="setupUI"/>
+          <include name="getApiResponse"/>
+          <include name="getValidations"/>
+        </methods>
+      </class> <!-- TestScripts.NdtvTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
