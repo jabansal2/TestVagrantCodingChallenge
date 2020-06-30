@@ -23,7 +23,7 @@ public class SingleBrowserClass {
 
     // TO create instance of class
     public static SingleBrowserClass getInstanceOfSingletonBrowserClass(){
-    	options.addArguments("--disable-notifications");
+ //   	options.addArguments("--disable-notifications");
         if(instanceOfSingleBrowserClass==null){
         	instanceOfSingleBrowserClass = new SingleBrowserClass();
         }
