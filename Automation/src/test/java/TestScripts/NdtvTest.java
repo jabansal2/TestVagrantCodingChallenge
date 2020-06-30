@@ -11,6 +11,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -99,6 +100,11 @@ public class NdtvTest {
 		dm.comparator(weatherDetailsFromUI, weatherDetailsFromApi, 1);
 	}
 	
+	
+	@AfterTest
+	public void closeTheDriver() {
+		driver.close();
+	}
 
 	
 }

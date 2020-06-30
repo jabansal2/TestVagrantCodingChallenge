@@ -2,36 +2,40 @@
 <testng-results total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-06-29T18:54:49Z" name="Suite" finished-at="2020-06-29T18:55:11Z" duration-ms="22017">
+  <suite started-at="2020-06-30T03:20:06Z" name="Default suite" finished-at="2020-06-30T03:20:29Z" duration-ms="23513">
     <groups>
     </groups>
-    <test started-at="2020-06-29T18:54:49Z" name="Test" finished-at="2020-06-29T18:55:11Z" duration-ms="22017">
+    <test started-at="2020-06-30T03:20:06Z" name="Default test" finished-at="2020-06-30T03:20:29Z" duration-ms="23513">
       <class name="TestScripts.NdtvTest">
-        <test-method is-config="true" signature="setupUI()[pri:0, instance:TestScripts.NdtvTest@7bab3f1a]" started-at="2020-06-29T14:54:49Z" name="setupUI" finished-at="2020-06-29T14:54:57Z" duration-ms="8206" status="PASS">
+        <test-method is-config="true" signature="setupUI()[pri:0, instance:TestScripts.NdtvTest@23c30a20]" started-at="2020-06-29T23:20:06Z" name="setupUI" finished-at="2020-06-29T23:20:10Z" duration-ms="4125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupUI -->
-        <test-method signature="getApiResponse()[pri:0, instance:TestScripts.NdtvTest@7bab3f1a]" started-at="2020-06-29T14:54:57Z" name="getApiResponse" finished-at="2020-06-29T14:54:59Z" duration-ms="2201" status="PASS">
+        <test-method signature="getApiResponse()[pri:0, instance:TestScripts.NdtvTest@23c30a20]" started-at="2020-06-29T23:20:10Z" name="getApiResponse" finished-at="2020-06-29T23:20:12Z" duration-ms="2256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getApiResponse -->
-        <test-method signature="testUI()[pri:0, instance:TestScripts.NdtvTest@7bab3f1a]" started-at="2020-06-29T14:54:59Z" name="testUI" finished-at="2020-06-29T14:55:10Z" duration-ms="10468" status="PASS">
+        <test-method signature="testUI()[pri:0, instance:TestScripts.NdtvTest@23c30a20]" started-at="2020-06-29T23:20:12Z" name="testUI" finished-at="2020-06-29T23:20:28Z" duration-ms="15882" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUI -->
-        <test-method signature="contentTypeVerification()[pri:0, instance:TestScripts.NdtvTest@7bab3f1a]" started-at="2020-06-29T14:55:10Z" name="contentTypeVerification" finished-at="2020-06-29T14:55:10Z" depends-on-methods="TestScripts.NdtvTest.getApiResponse" duration-ms="2" status="PASS">
+        <test-method signature="contentTypeVerification()[pri:0, instance:TestScripts.NdtvTest@23c30a20]" started-at="2020-06-29T23:20:28Z" name="contentTypeVerification" finished-at="2020-06-29T23:20:28Z" depends-on-methods="TestScripts.NdtvTest.getApiResponse" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contentTypeVerification -->
-        <test-method signature="statusCodeVerification()[pri:0, instance:TestScripts.NdtvTest@7bab3f1a]" started-at="2020-06-29T14:55:10Z" name="statusCodeVerification" finished-at="2020-06-29T14:55:10Z" depends-on-methods="TestScripts.NdtvTest.getApiResponse" duration-ms="1" status="PASS">
+        <test-method signature="statusCodeVerification()[pri:0, instance:TestScripts.NdtvTest@23c30a20]" started-at="2020-06-29T23:20:28Z" name="statusCodeVerification" finished-at="2020-06-29T23:20:28Z" depends-on-methods="TestScripts.NdtvTest.getApiResponse" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- statusCodeVerification -->
-        <test-method signature="getValidations()[pri:0, instance:TestScripts.NdtvTest@7bab3f1a]" started-at="2020-06-29T14:55:10Z" name="getValidations" finished-at="2020-06-29T14:55:11Z" depends-on-methods="TestScripts.NdtvTest.testUI, TestScripts.NdtvTest.getApiResponse" duration-ms="1108" status="PASS">
+        <test-method signature="getValidations()[pri:0, instance:TestScripts.NdtvTest@23c30a20]" started-at="2020-06-29T23:20:28Z" name="getValidations" finished-at="2020-06-29T23:20:29Z" depends-on-methods="TestScripts.NdtvTest.testUI, TestScripts.NdtvTest.getApiResponse" duration-ms="1094" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getValidations -->
+        <test-method is-config="true" signature="closeTheDriver()[pri:0, instance:TestScripts.NdtvTest@23c30a20]" started-at="2020-06-29T23:20:29Z" name="closeTheDriver" finished-at="2020-06-29T23:20:29Z" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTheDriver -->
       </class> <!-- TestScripts.NdtvTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
