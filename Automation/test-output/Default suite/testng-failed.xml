@@ -5,7 +5,9 @@
     <classes>
       <class name="TestScripts.NdtvTest">
         <methods>
+          <include name="statusCodeVerification"/>
           <include name="testUI"/>
+          <include name="closeTheDriver"/>
           <include name="setupUI"/>
           <include name="getApiResponse"/>
           <include name="getValidations"/>

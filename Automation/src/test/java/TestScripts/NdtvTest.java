@@ -3,17 +3,14 @@ package TestScripts;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import ReusableUtilities.DataManipulationMethods;
@@ -23,24 +20,35 @@ import io.restassured.response.Response;
 public class NdtvTest {
 
 	WebDriver driver;
-	String city = "Amritsar";
+//	String city = "Amritsar";
 	Response res;
 	
+	private String city="";	
+	
+	public NdtvTest(String city) {
+	//	super();
+		this.city = city;
+	}
+
+
 	HashMap<String, Object> weatherDetailsFromUI = new HashMap<String, Object>();
 	HashMap<String, Object> weatherDetailsFromApi = new HashMap<String, Object>();
 	
 	WeatherDetailsAPI apiInstance = new WeatherDetailsAPI();
 	DataManipulationMethods dm = new DataManipulationMethods();
 
-	@BeforeTest
+	@BeforeClass
 	public void setupUI() {
 		// use Chrome Driver
 		RestAssured.baseURI = "http://api.openweathermap.org";
 		RestAssured.basePath = "/data/2.5/weather";
-		System.setProperty("webdriver.chrome.driver","/home/pardeepkaur/Downloads/Ubuntu_Downloads_bkup/ChromeDriver/chromedriver");
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--disable-notifications");
-		driver = new ChromeDriver(options);
+//		System.setProperty("webdriver.chrome.driver","/home/pardeepkaur/Downloads/Ubuntu_Downloads_bkup/ChromeDriver/chromedriver");
+//		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("--disable-notifications");
+		SingleBrowserClass sbc1 = SingleBrowserClass.getInstanceOfSingletonBrowserClass();
+		driver = sbc1.getDriver();
+		
+//		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
@@ -101,7 +109,7 @@ public class NdtvTest {
 	}
 	
 	
-	@AfterTest
+	@AfterSuite
 	public void closeTheDriver() {
 		driver.close();
 	}
