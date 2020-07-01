@@ -89,9 +89,10 @@ public class DataManipulationMethods {
 		else if(((tempUI > minTempApi)&&(tempUI <maxTempApi)) || (tempUI <= maxTempApi +var)) {
 			assertion.assertTrue(true, "Temperature is in defined range");
 		}
-		else
+		else {
 			System.out.println("temperature neither is matching max and min value nor is in the specified variance");
-		
+			assertion.assertTrue(false, "temperature neither is matching max and min value nor is in the specified variance");
+		}
 		if((windSpeedapi == windSpeedMinUi) || (windSpeedapi == windSpeedMaxUi)) {
 			assertion.assertTrue(true, "WindSpeed is matching");
 		}
@@ -102,6 +103,7 @@ public class DataManipulationMethods {
 		}
 		else {
 			System.out.println("WindSpeed neither is matching nor falling in specified variance");
+			assertion.assertTrue(false, "windSpeed Mismatch");
 			
 		}
 		
@@ -109,8 +111,11 @@ public class DataManipulationMethods {
 			assertion.assertTrue(true, "Humidity is matching");
 		else if((humidityUI < humidityApi +var)||(humidityUI > humidityApi -var))
 			assertion.assertTrue(true, "Humidity is falling in the specified variance");
-		else
+		else {
 			System.out.println("Humidity is not macthing");
+			assertion.assertTrue(false, "Humidity is not macthing");
+		}
+		assertion.assertAll();
 	}
 
 	public int gethumidityValueInInteger(String s) {
